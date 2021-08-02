@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh Program dengan DOM</title>
+  </head>
+  <body>
+    <h1>Aplikasi Ubah Warna</h1>
+    
+    <label>Warna latar:</label>
+    <input type="color" id="bg-color" onchange="updateBackgroundColor()"/>
+    <br/>
+    <label>Warna teks:</label>
+    <input type="color" id="text-color" onchange="updateTextColor()"/>
+
+    <script>
+      const bgColor = document.getElementById("bg-color");
+      const textColor = document.getElementById("text-color");
+
+      function updateBackgroundColor(){
+        document.body.style.backgroundColor = bgColor.value;
+      }
+
+      function updateTextColor(){
+        document.body.style.color = textColor.value;
+      }
+    </script>
+  </body>
+</html>

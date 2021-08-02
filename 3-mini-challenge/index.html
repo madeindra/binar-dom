@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mini Challenge</title>
+  </head>
+  <body>
+    <h1 id="heading" onclick="changeHeadingColor()" style="color: black;">Halo</h1>
+    <p id="paragraph" onclick="changeParagraphText()">Saya adalah sebuah teks</p>
+
+    <script>
+      function changeHeadingColor(){
+        const headingElement = document.getElementById("heading");
+
+        if(headingElement.style.color === "black"){
+          headingElement.style.color = "red";
+        } else {
+          headingElement.style.color = "black";
+        }
+
+        console.log(headingElement.style.color);
+      }
+
+      function changeParagraphText(){
+        const paragraphElement = document.getElementById("paragraph");
+
+        paragraphElement.innerHTML = "Sekarang saya menjadi teks yang berbeda";
+      }
+    </script>
+  </body>
+</html>
